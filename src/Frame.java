@@ -9,10 +9,15 @@ public class Frame extends JFrame implements ActionListener, KeyListener {
     JPanel buttonsPanel = new JPanel();
 
     int guess,letter;
-    boolean canContinue, gameOver;
+    boolean canContinue = true;
+    boolean  gameOver;
     String word;
 
     public Frame(){
+
+        word = new Words().getWords();
+        //System.out.println(word);
+
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new BorderLayout());
         this.setVisible(true);
@@ -27,7 +32,7 @@ public class Frame extends JFrame implements ActionListener, KeyListener {
                 buttons[r][c] = new JButton();
                 buttons[r][c].setBackground(Color.WHITE);
                 buttons[r][c].setEnabled(false);
-                buttons[r][c].setFont(new Font("MV Boli", Font.BOLD,20));
+                buttons[r][c].setFont(new Font("MLA", Font.BOLD,20));
                 buttonsPanel.add(buttons[r][c]);
 
 
@@ -38,6 +43,7 @@ public class Frame extends JFrame implements ActionListener, KeyListener {
         this.add(buttonsPanel);
         this.setTitle("Vordle");
         this.addKeyListener(this);
+        this.setFocusable(true);
         this.repaint();
         this.revalidate();
         this.setLocationRelativeTo(null);
@@ -56,7 +62,9 @@ public class Frame extends JFrame implements ActionListener, KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
+
         int code=e.getKeyCode();
+       // System.out.println(code);
 
 
         if(code>=65 && code<=90) {
@@ -69,6 +77,27 @@ public class Frame extends JFrame implements ActionListener, KeyListener {
             else{
                 canContinue = false;
             }
+
+
+        } else if (code == 10) {
+            if(guess<6){
+                if(letter == 5){
+                    String wordTyped ="";
+                    for(int i = 0;i<5;i++){
+                        wordTyped = wordTyped + buttons[guess][i].getText();
+                    }
+                }
+            }
+        }
+
+
+        else if (code == 8){
+            if(letter>0){
+                letter--;
+                canContinue = true;
+                buttons[guess][letter].setText("");
+            }
+
         }
 
     }
@@ -77,7 +106,6 @@ public class Frame extends JFrame implements ActionListener, KeyListener {
     public void keyReleased(KeyEvent e) {
 
     }
-
-    // @Override
+    
 
 }
