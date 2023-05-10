@@ -14,7 +14,10 @@ public class Words {
             , "Abide", "Caper", "Dodge","Ample", "Bacon", "Chirp", "Dwarf", "Emote"
             , "Fable", "Gauze", "Hurry", "Inlay", "Joust", "Knead", "Lurks", "Mimic"
             , "Nymph", "Oasis", "Prawn", "Quilt", "Razor", "Swoop", "Toxic", "Usual"
-            , "Vexed", "Wedge", "Xenon", "Yummy"};
+            , "Vexed", "Wedge", "Xenon", "Yummy","flume", "viral", "dwarf", "fable"
+            , "vexed", "spicy", "gloom", "tulip", "funky", "swoop", "sneak", "giddy"
+            , "plush", "swirl", "graze", "crave", "braid", "chirp", "slump", "chive"
+            , "sable", "whirl", "blaze", "dusky", "creep"};
 
     public String getWords(){
         random =new Random();

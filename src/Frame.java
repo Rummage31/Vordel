@@ -51,7 +51,7 @@ public class Frame extends JFrame implements ActionListener, KeyListener {
         label = new JLabel();
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setFont(new Font("MLA", Font.BOLD, 20));
-        label.setForeground(new Color(162, 120, 206));
+        label.setForeground(new Color(123, 194, 99));
         label.setOpaque(true);
         label.setText("Vordle");
         label.setBackground(Color.BLACK);
@@ -61,10 +61,10 @@ public class Frame extends JFrame implements ActionListener, KeyListener {
         score.setFont(new Font("MLA", Font.BOLD, 20));
         score.setOpaque(true);
         score.setText("Score: " + points + " "); //Space after to make it look clear
-        score.setBackground(Color.CYAN);
+        score.setBackground(new Color(218, 46, 51));
 
         resetButton = new JButton();
-        resetButton.setForeground(Color.BLUE);
+        resetButton.setForeground(new Color(162, 120, 206));
         resetButton.setText("Reset");
         resetButton.setFont(new Font("MLA", Font.BOLD, 20));
         resetButton.setBackground(Color.BLACK);
@@ -72,7 +72,7 @@ public class Frame extends JFrame implements ActionListener, KeyListener {
         resetButton.addActionListener(this);
 
         nextButton = new JButton();
-        nextButton.setForeground(Color.BLUE);
+        nextButton.setForeground(new Color(162, 120, 206));
         nextButton.setText("Next");
         nextButton.setFont(new Font("MLA", Font.BOLD, 20));
         nextButton.setBackground(Color.BLACK);
