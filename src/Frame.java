@@ -7,6 +7,7 @@ public class Frame extends JFrame implements ActionListener, KeyListener {
 
     JButton buttons[][] = new JButton[6][5];
     JPanel buttonsPanel = new JPanel();
+    JLabel label;
 
     int guess,letter;
     boolean canContinue = true;
@@ -22,6 +23,14 @@ public class Frame extends JFrame implements ActionListener, KeyListener {
         this.setLayout(new BorderLayout());
         this.setVisible(true);
         this.setSize(500,600);
+
+        label = new JLabel();
+        label.setHorizontalAlignment(JLabel.CENTER);
+        label.setFont(new Font("MLA", Font.BOLD,20));
+        label.setForeground(new Color(162, 120, 206));
+        label.setOpaque(true);
+        label.setText("Vordle");
+        label.setBackground(Color.BLACK);
 
         buttonsPanel.setVisible(true);
         buttonsPanel.setLayout(new GridLayout(6,5));
@@ -40,6 +49,7 @@ public class Frame extends JFrame implements ActionListener, KeyListener {
             }
 
         }
+        this.add(label,BorderLayout.NORTH);
         this.add(buttonsPanel);
         this.setTitle("Vordle");
         this.addKeyListener(this);
@@ -85,6 +95,8 @@ public class Frame extends JFrame implements ActionListener, KeyListener {
                     String wordTyped ="";
                     for(int i = 0;i<5;i++){
                         wordTyped = wordTyped + buttons[guess][i].getText();
+                        label.setForeground(Color.BLUE);
+                        label.setText("Vordle");
                     }
                 }
             }

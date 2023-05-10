@@ -11,7 +11,10 @@ public class Words {
     String[] wordList ={"Blunt", "Flask", "Gloom", "Hatch", "Inept", "Jolly"
             , "Kiosk", "Lunar", "Mirth", "Noble", "Onset", "Pique", "Quell", "Risky"
             , "Scarf", "Thick", "Unzip", "Vapid", "Wagon", "Xerox", "Yacht", "Zesty"
-            , "Abide", "Caper", "Dodge"};
+            , "Abide", "Caper", "Dodge","Ample", "Bacon", "Chirp", "Dwarf", "Emote"
+            , "Fable", "Gauze", "Hurry", "Inlay", "Joust", "Knead", "Lurks", "Mimic"
+            , "Nymph", "Oasis", "Prawn", "Quilt", "Razor", "Swoop", "Toxic", "Usual"
+            , "Vexed", "Wedge", "Xenon", "Yummy"};
 
     public String getWords(){
         random =new Random();
